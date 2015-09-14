@@ -59,6 +59,8 @@ public class EmployeeDetails extends ActionBarActivity {
                     int val= (int) v.getTag();
                     ((Button)v).setText("Approved ");
                     ((Button)v).setEnabled(false);
+                   // ((Button)v).setTextColor();
+                    //((Button)v).setTextColor(R.color.white);
                     new getEmployeeData().execute();
                 }
             });
@@ -104,7 +106,6 @@ public class EmployeeDetails extends ActionBarActivity {
                     if (response.equalsIgnoreCase("1"))
                     {
                         Log.d("success", response);
-
                         Toast.makeText(getApplicationContext(), "Successfully approved", Toast.LENGTH_LONG).show();
                     }
                     else

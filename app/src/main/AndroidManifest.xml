@@ -26,7 +26,7 @@
             android:label="Request List" />
         <activity
             android:name=".WelcomeUser"
-            android:label="@string/title_activity_welcome_user"
+            android:label="Ediary"
             android:theme="@style/AppThemeNoActionBar">
         </activity>
     </application>

@@ -17,7 +17,7 @@ android:layout_marginBottom="8dp">
                     android:text="Assign name"
                     android:gravity="center"
                     android:textSize="20dp"
-                    android:textColor="#3366CC"
+                    android:textColor="@color/primaryColor"
                     android:padding="5dp"
                     />
                 <TextView
@@ -27,7 +27,7 @@ android:layout_marginBottom="8dp">
                     android:text="Date"
                     android:gravity="end"
                     android:textSize="20dp"
-                    android:textColor="#3366CC"
+                    android:textColor="@color/primaryColor"
                     android:padding="5dp"
                     />
             </LinearLayout>
@@ -85,10 +85,10 @@ android:layout_marginBottom="8dp">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
+                    android:gravity="center_horizontal|center_vertical"
                     android:id="@+id/approve"
                     android:clickable="true"
-                    android:onClick="SubmitResponse"
+
                     android:text="Approve"/>
             </LinearLayout>
 

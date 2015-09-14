@@ -1,6 +1,7 @@
 package com.mynotes.prajyot.moonshot;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -41,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
     {
         Username=usernm.getText().toString().trim();
         Password=password.getText().toString().trim();
-        new getData().execute();
-//        Intent employeeActivity=new Intent(MainActivity.this,WelcomeUser.class);
-//        startActivity(employeeActivity);
+      //  new getData().execute();
+        Intent employeeActivity = new Intent(MainActivity.this, WelcomeUser.class);
+        startActivity(employeeActivity);
 
     }
 
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 String url="http://107.23.14.180:204/_layouts/omsca_app/GeoLogin.aspx?Username="+Username+"&Password="+Password;
                 ArrayList<NameValuePair> postParam = new ArrayList<NameValuePair>();
                 ArrayList<NameValuePair> header = new ArrayList<NameValuePair>();
+                //ArrayList<ContentValues>
                 header.add(new BasicNameValuePair("Referer","http://107.23.14.180:204/_layouts/omsca_app/GeoLogin.aspx"));
 //                postParam.add(new BasicNameValuePair("Username",Username));
 //                postParam.add(new BasicNameValuePair("Password",Password));
@@ -90,13 +92,16 @@ public class MainActivity extends AppCompatActivity {
             try {
                 progressDialog.dismiss();
                 if (connectedOrNot.equals("success")) {
-                    //if ()
-                    Log.e("resultGetCategory", response);
-                    setdata();
-//                    Intent employeeActivity=new Intent(MainActivity.this,EmployeeListActivity.class);
-//                    startActivity(employeeActivity);
-                    Intent employeeActivity=new Intent(MainActivity.this,WelcomeUser.class);
-                    startActivity(employeeActivity);
+                    if (employeeResult!=null) {
+                        if (employeeResult.getResult().equalsIgnoreCase("valid")) {
+                            Log.e("resultGetCategory", response);
+                            setdata();
+                            Intent employeeActivity = new Intent(MainActivity.this, WelcomeUser.class);
+                            startActivity(employeeActivity);
+                        }else {
+                            Toast.makeText(getApplicationContext(),"User does not exist",Toast.LENGTH_LONG).show();
+                        }
+                    }
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Please check your internet connection", Toast.LENGTH_LONG).show();

@@ -7,15 +7,29 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ediary">
+        >
+        <!--android:background="@drawable/ediary"-->
         <android.support.v7.widget.Toolbar
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/toolbar"
             android:background="@color/primaryColor"/>
-        <!--<TextView-->
-            <!--android:layout_width=""-->
-            <!--android:layout_height="" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to E-diary"
+            android:id="@+id/welcom"
+            android:textSize="40dp"
+            android:layout_below="@+id/toolbar"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernm"
+            android:layout_below="@+id/welcom"
+            android:textSize="25dp"
+            android:text="Username"
+            android:textColor="@color/white"/>
     </RelativeLayout>
     <fragment
         android:id="@+id/drawer"
