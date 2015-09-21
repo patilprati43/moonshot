@@ -1,13 +1,16 @@
 package com.mynotes.prajyot.moonshot;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +19,6 @@ import com.google.gson.Gson;
 import com.mynotes.prajyot.moonshot.Login.CustomHttpClient;
 import com.mynotes.prajyot.moonshot.Login.LoginObject;
 import com.mynotes.prajyot.moonshot.Login.ResultLogin;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     static String Username,Password;
     public static ArrayList<ResultLogin> employeeList=new ArrayList<>();
     LoginObject employeeResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +40,16 @@ public class MainActivity extends AppCompatActivity {
         password= (TextView) findViewById(R.id.password);
         Button login= (Button) findViewById(R.id.login);
 
+
+
     }
     public void LoginDone(View view)
     {
         Username=usernm.getText().toString().trim();
         Password=password.getText().toString().trim();
-      //  new getData().execute();
-        Intent employeeActivity = new Intent(MainActivity.this, WelcomeUser.class);
-        startActivity(employeeActivity);
+       new getData().execute();
+//        Intent employeeActivity = new Intent(MainActivity.this, WelcomeUser.class);
+//        startActivity(employeeActivity);
 
     }
 
@@ -52,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     {
        for (int i=0;i<employeeResult.getFence().size();i++)
            employeeList.add(employeeResult.getFence().get(i));
-
     }
 
     public  class getData extends AsyncTask<String, Integer, String> {
@@ -112,3 +116,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+

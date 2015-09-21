@@ -3,15 +3,49 @@
     android:layout_height="match_parent"
     tools:context="com.mynotes.prajyot.moonshot.DrawerFragment"
     android:background="@color/white">
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Employee List"
-        android:id="@+id/employeeListID"
-        android:onClick="showList"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:clickable="true"
-        android:textSize="20sp"
-        android:padding="10dp"/>
+        android:background="@drawable/row"
+        android:onClick="showList"
+        android:padding="12dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/list"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Employee List"
+            android:id="@+id/employeeListID"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="48dp"/>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:background="@drawable/row"
+            android:padding="12dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Logot"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="48dp"/>
+        </RelativeLayout>
+
     <!--<view-->
         <!--android:layout_width="match_parent"-->
         <!--android:id="@+id/viewId"-->
@@ -20,13 +54,8 @@
         <!--android:background="@color/primaryColor">-->
         <!-- -->
     <!--</view>-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logot"
-        android:textSize="20sp"
-        android:layout_below="@+id/employeeListID"
-        android:padding="10dp"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

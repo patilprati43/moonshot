@@ -7,33 +7,15 @@
     android:gravity="center_vertical"
 
     android:padding="10dp"
-    android:background="@drawable/background">
+    android:background="@drawable/bg">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textColor="#ffffff"
+            android:textColor="@color/textColor"
             android:padding="5dp"
             android:textSize="25sp"/>
-    <!--<android.support.design.widget.TextInputLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" >-->
-
-        <!--<EditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="Username"-->
-            <!--android:textSize="20sp"-->
-            <!--android:inputType="textFilter"-->
-            <!--android:background="@drawable/edittext"-->
-            <!--android:padding="5dp"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:textColorHint="#d0d0d0"-->
-            <!--android:layout_marginBottom="10dp"-->
-            <!--android:singleLine="true"-->
-            <!--/>-->
-    <!--</android.support.design.widget.TextInputLayout>-->
 
         <EditText
             android:layout_width="match_parent"
@@ -44,8 +26,8 @@
             android:inputType="textFilter"
             android:background="@drawable/edittext"
             android:padding="5dp"
-            android:textColor="#ffffff"
-            android:textColorHint="#d0d0d0"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hintColor"
             android:layout_marginBottom="10dp"
             android:singleLine="true"
             />
@@ -57,8 +39,8 @@
             android:id="@+id/password"
             android:background="@drawable/edittext"
             android:padding="5dp"
-            android:textColor="#ffffff"
-            android:textColorHint="#d0d0d0"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hintColor"
             android:singleLine="true"
             android:inputType="textPassword"
             />
