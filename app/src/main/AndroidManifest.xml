@@ -3,15 +3,17 @@
     package="com.mynotes.prajyot.moonshot" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logoediary"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,10 +22,12 @@
         </activity>
         <activity
             android:name=".EmployeeListActivity"
-            android:label="Employee List" />
+            android:label="Employee List"
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".EmployeeDetails"
-            android:label="Request List" />
+            android:name=".RequestList"
+            android:label="Pending approvals"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".WelcomeUser"
             android:label="Ediary"

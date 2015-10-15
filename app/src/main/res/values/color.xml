@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
-    <color name="login">#FF8000</color>
-    <color name="primaryColor">#8BC34A</color>
-    <color name="primaryDarkColor">#689F38</color>
-    <color name="accentColor">#F44336</color>
+    <color name="primaryColor">#123a45</color>
+    <color name="primaryDarkColor">#FF1CA5B0</color>
+    <color name="accentColor">#c8f44336</color>
     <color name="textColor">#5f5f5f</color>
     <color name="hintColor">#c5c5c5</color>
 </resources>

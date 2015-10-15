@@ -7,6 +7,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="false"
+            android:background="@color/primaryColor"
+
+            android:padding="12dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/user"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Username"
+                android:id="@+id/user"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="48dp"/>
+        </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -21,7 +42,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Employee List"
+            android:text="Pending approvals"
             android:id="@+id/employeeListID"
             android:textSize="20sp"
             android:gravity="center_vertical"
@@ -31,6 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:clickable="true"
+            android:id="@+id/rllogout"
+
             android:background="@drawable/row"
             android:padding="12dp">
             <ImageView
@@ -40,7 +63,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Logot"
+                android:text="Logout"
                 android:textSize="20sp"
                 android:gravity="center_vertical"
                 android:paddingLeft="48dp"/>

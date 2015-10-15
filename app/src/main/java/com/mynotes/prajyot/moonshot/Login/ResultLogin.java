@@ -2,33 +2,36 @@ package com.mynotes.prajyot.moonshot.Login;
 
 
 public class ResultLogin {
-    String EmpIDLookup_x003a_Full_x0020_Nam;
-    String WeekStartDateShow;
-    String WeekEndDateShow;
+    String EmployeeName;
+    String Weekenddate;
+    String Weekstartdate;
     String ID;
+    String EmployeeID;
+    String DiaryMasterID;
+    String SubmittedDate;
 
-    public String getEmpIDLookup_x003a_Full_x0020_Nam() {
-        return EmpIDLookup_x003a_Full_x0020_Nam;
+    public String getEmployeeName() {
+        return EmployeeName;
     }
 
-    public void setEmpIDLookup_x003a_Full_x0020_Nam(String empIDLookup_x003a_Full_x0020_Nam) {
-        EmpIDLookup_x003a_Full_x0020_Nam = empIDLookup_x003a_Full_x0020_Nam;
+    public void setEmployeeName(String employeeName) {
+        EmployeeName = employeeName;
     }
 
-    public String getWeekStartDateShow() {
-        return WeekStartDateShow;
+    public String getWeekenddate() {
+        return Weekenddate;
     }
 
-    public void setWeekStartDateShow(String weekStartDateShow) {
-        WeekStartDateShow = weekStartDateShow;
+    public void setWeekenddate(String weekenddate) {
+        Weekenddate = weekenddate;
     }
 
-    public String getWeekEndDateShow() {
-        return WeekEndDateShow;
+    public String getWeekstartdate() {
+        return Weekstartdate;
     }
 
-    public void setWeekEndDateShow(String weekEndDateShow) {
-        WeekEndDateShow = weekEndDateShow;
+    public void setWeekstartdate(String weekstartdate) {
+        Weekstartdate = weekstartdate;
     }
 
     public String getID() {
@@ -37,5 +40,29 @@ public class ResultLogin {
 
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public String getEmployeeID() {
+        return EmployeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        EmployeeID = employeeID;
+    }
+
+    public String getDiaryMasterID() {
+        return DiaryMasterID;
+    }
+
+    public void setDiaryMasterID(String diaryMasterID) {
+        DiaryMasterID = diaryMasterID;
+    }
+
+    public String getSubmittedDate() {
+        return SubmittedDate;
+    }
+
+    public void setSubmittedDate(String submittedDate) {
+        SubmittedDate = submittedDate;
     }
 }

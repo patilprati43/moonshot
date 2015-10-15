@@ -9,6 +9,8 @@ public class ApprovalList {
     String Task;
     String In_x0020_Time;
     String Out_x0020_Time;
+    String Employee_x0020_ID;
+    String DiaryMasterID;
 
     public String getID() {
         return ID;
@@ -64,5 +66,21 @@ public class ApprovalList {
 
     public void setOut_x0020_Time(String out_x0020_Time) {
         Out_x0020_Time = out_x0020_Time;
+    }
+
+    public String getEmployee_x0020_ID() {
+        return Employee_x0020_ID;
+    }
+
+    public void setEmployee_x0020_ID(String employee_x0020_ID) {
+        Employee_x0020_ID = employee_x0020_ID;
+    }
+
+    public String getDiaryMasterID() {
+        return DiaryMasterID;
+    }
+
+    public void setDiaryMasterID(String diaryMasterID) {
+        DiaryMasterID = diaryMasterID;
     }
 }

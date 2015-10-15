@@ -4,57 +4,87 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center_vertical"
+    android:background="#a3ccccff">
 
-    android:padding="10dp"
-    android:background="@drawable/bg">
-
-        <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/banner"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:textColor="@color/textColor"
-            android:padding="5dp"
-            android:textSize="25sp"/>
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ediary"
+                android:src="@drawable/logoediary"
+                android:background="@drawable/circle"
+                android:padding="40dp"/>
+        </LinearLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loginscreen"
+        android:visibility="gone"
+        android:padding="30dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/logoediary"
+                android:paddingBottom="10dp"/>
+        <com.mynotes.prajyot.moonshot.Edittexthint
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="@string/username"
             android:textSize="20sp"
             android:id="@+id/usernm"
             android:inputType="textFilter"
             android:background="@drawable/edittext"
             android:padding="5dp"
-            android:textColor="@color/textColor"
+            android:textColor="@color/accentColor"
             android:textColorHint="@color/hintColor"
             android:layout_marginBottom="10dp"
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
+
+        </com.mynotes.prajyot.moonshot.Edittexthint>
+        <com.mynotes.prajyot.moonshot.Edittexthint
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:textSize="20sp"
             android:id="@+id/password"
             android:background="@drawable/edittext"
             android:padding="5dp"
-            android:textColor="@color/textColor"
+            android:textColor="@color/accentColor"
             android:textColorHint="@color/hintColor"
             android:singleLine="true"
             android:inputType="textPassword"
             />
+        </com.mynotes.prajyot.moonshot.Edittexthint>
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/login"
             android:id="@+id/login"
-
             android:onClick="LoginDone"
-
             android:layout_marginTop="15dp"
             android:layout_gravity="right"
             />
+    </LinearLayout>
 
 
 </LinearLayout>
